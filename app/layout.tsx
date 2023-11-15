@@ -3,11 +3,11 @@ import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
 import Nav from "@/components/layout/nav";
-import Footer from "@/components/layout/footer";
+import Footer from "@/components/layout/Footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "8-zense.com",
   description:
     "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
   metadataBase: new URL("https://precedent.dev"),

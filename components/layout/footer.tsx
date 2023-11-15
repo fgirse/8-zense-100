@@ -1,28 +1,44 @@
-import { BuyMeACoffee } from "../shared/icons";
+"use client";
 
-export default function Footer() {
+import Image from "next/image";
+import Social from "../Social";
+import config from "../../config/config.json";
+import menu from "../../config/menu.json";
+import social from "../../config/social.json";
+import { markdownify } from "../../lib/utils/textConverter";
+import Link from "next/link";
+
+const Footer = () => {
+  const { copyright } = config.params;
+
   return (
-    <div className="absolute w-full py-5 text-center">
-      <p className="text-gray-500">
-        A project by{" "}
-        <a
-          className="font-semibold text-gray-600 underline-offset-4 transition-colors hover:underline"
-          href="https://twitter.com/steventey"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Steven Tey
-        </a>
-      </p>
-      <a
-        href="https://www.buymeacoffee.com/steventey"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mx-auto mt-2 flex max-w-fit items-center justify-center space-x-2 rounded-lg border border-gray-200 bg-white px-6 py-2 transition-all duration-75 hover:scale-105"
-      >
-        <BuyMeACoffee className="h-6 w-6" />
-        <p className="font-medium text-gray-600">Buy me a coffee</p>
-      </a>
-    </div>
+    <footer className="bg-theme-light dark:bg-darkmode-theme-light">
+      <div className="container">
+        <div className="row items-center py-10">
+          <div className="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left">
+            <Image src="/images/logoEz.png" width="200" height="200" alt="Logo 8-zeise.com"/>
+          </div>
+          <div className="mb-8 text-center lg:col-6 lg:mb-0">
+            <ul>
+              {menu.footer.map((menu) => (
+                <li className="m-3 inline-block" key={menu.name}>
+                  <Link href={menu.url}>{menu.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-8 text-center lg:col-3 lg:mb-0 lg:mt-0 lg:text-right">
+            <Social source={social.main} className="social-icons" />
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-border py-7 dark:border-darkmode-border">
+        <div className="container text-center text-light dark:text-darkmode-light">
+          <p dangerouslySetInnerHTML={markdownify(copyright)} />
+        </div>
+      </div>
+    </footer>
   );
-}
+};
+
+export default Footer;
