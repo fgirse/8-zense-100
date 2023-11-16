@@ -1,5 +1,3 @@
-"use client"
-
 import { Gallery } from "react-grid-gallery";
 import { images as IMAGES } from "../../content/homepage/photo";
 
@@ -25,4 +23,4 @@ export default function App() {
       <Gallery images={images} enableImageSelection={false} />
     </div>
   );
-}0
+}

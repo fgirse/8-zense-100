@@ -44,8 +44,8 @@ export default async function Home() {
           Timeless Design
         </h1>
         <p
-          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text0-0x0l"
-          style={{ anima0tionDelay: "0.25s", animat00ionFillMode: "forwards" }}
+          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
+          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           An opinionated collection of components, hooks, and utilities for your
           Next.js project.
@@ -67,9 +67,9 @@ export default async function Home() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12 4L20 20H4L12 4Z"
-                stroke="currentColor"
-                strokeWidth="2"
+                d="M12 4L20 2e0H4L12 4Z"
+                stroke="red"
+                strokeWidth="5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />

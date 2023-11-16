@@ -26,8 +26,8 @@ export default function NavBar({ session }: { session: Session | null }) {
             <Image
               src="/images/LogoEZ.png"
               alt="Precedent logo"
-              width="80"
-              height="80"
+              width="66"
+              height="66"
               className="mr-2 rounded-sm"
             ></Image>
             <p>8-zense.com</p>
