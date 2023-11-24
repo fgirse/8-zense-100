@@ -8,6 +8,8 @@ import { nFormatter } from "@/lib/utils";
 import Gallery from"../components/home/Gallery"
 
 
+
+
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
     "https://api.github.com/repos/steven-tey/precedent",
@@ -23,62 +25,37 @@ export default async function Home() {
     },
   )
     .then((res) => res.json())
-    .catch((e) => console.log(e));
+    .catch((e) => console.log(e));58
 
   return (
     <>
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+      
+    
 
-
-
-
-
-<div className="grid grid-cols-12 grid-rows-11 gap-2">
-    <div className=" flex flex-col   items-center  h-36 w-60  bg-orange-500/20 col-span-7 row-span-3">
+<div className="w-[90vw] bg-white grid grid-cols-12 grid-rows-11 gap-2">
+    <div className="bg-amber-500 col-span-7 row-span-3">
     <h1
-          className=" h-full w-full bg-gradient-to-br from-yellow-600 to-stone-200 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
+
+       className="animate-fade-up text-left font-black uppercase bg-gradient-to-br from-yellow-600 to-stone-500 bg-clip-text font-display text-4xl tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          Timeless Design
+         Timeless Design
         </h1>
     </div>
-    <div className="col-span-5 row-span-5 col-start-8"></div>
-    <div className=" w-full h-36 bg-[url('/images/sideboardobg.png')] bg-contain bg-no-repeat col-span-7 row-span-2 row-start-4">3</div>
-    <div className=" col-span-3 row-span-3 row-start-6">4</div>
+    <div className="bg-amber-600 col-span-5 row-span-5 col-start-8">
+      <h1 className="text-2xl text-slate-200"></h1>
+    </div>
+    <div className="bg-[url('/images/sideboardobg.png')] bg-contain
+     bg-no-repeat w-full h-36 col-start-0 row-span-2 col-span-7 row-start-4"></div>
+    <div className="col-span-3 row-span-3 row-start-6">4</div>
     <div className="col-span-3 row-span-3 col-start-10 row-start-6">9</div>
     <div className="col-span-3 row-span-3 col-start-1 row-start-9">10</div>
     <div className="col-span-3 row-span-3 col-start-10 row-start-9">11</div>
-    <div className="w-full h-40 bg-[url('/images/LogoEZ.png')] bg-cover bg-no-repeat col-span-6 row-span-6 col-start-4 row-start-6"></div>
+    <div className="h-36 bg-[url('/images/LogoEZ.png')] bg-contain bg-no-repeat rounded-xl shadow-xl col-span-7 row-span-6 col-start-3 row-start-6">12</div>
 </div>
+    <Gallery/>
     
-
-
-
-        <a
-          href="https://twitter.com/steventey/status/1613928948915920896"
-          target="_blank"
-          rel="noreferrer"
-          className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
-        >
-          <Twitter className="h-5 w-5 text-[#1d9bf0]" />
-          <p className="text-sm font-semibold text-[#1d9bf0]">
-            Introducing Precedent
-          </p>
-        </a>
-        <h1
-          className=" h-full w-full bg-gradient-to-br from-yellow-600 to-stone-200 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
-          style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
-        >
-          Timeless Design
-        </h1>
-        <p
-          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
-          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-        >
-          An opinionated collection of components, hooks, and utilities for your
-          Next.js project.
-        </p>
-        <div
+         <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
         >
@@ -95,9 +72,9 @@ export default async function Home() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12 4L20 2e0H4L12 4Z"
-                stroke="red"
-                strokeWidth="5"
+                d="M12 4L20 20H4L12 4Z"
+                stroke="currentColor"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -117,8 +94,7 @@ export default async function Home() {
             </p>
           </a>
         </div>
-      </div>
-      <Gallery/>
+      
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card

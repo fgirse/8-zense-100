@@ -18,13 +18,11 @@ const images = IMAGES.map((image) => ({
   ),
 }));
 
-
-
 export default function App() {
   return (
     <div className="h-60 gap-12 flex flex-col items-center justify-start">
       <h1 className="mb-5 text-[4rem] text-yellow-500">Gallerie</h1>
-      <Gallery images={images} enableImageSelection={false} />
+      <Gallery images={images} enableImageSelection={true} />
     </div>
   );
 }
