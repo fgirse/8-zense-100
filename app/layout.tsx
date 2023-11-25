@@ -1,9 +1,10 @@
+¨ovier from "../Components/AuthProvider"
+import "./globals.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import { sfPro, inter } from "./fonts";
-import Nav from "@/components/layout/nav";
-import Footer from "@/components/layout/Footer";
+import { sfPro, inter } from "./fonts"
+import Footer from "Components/layout/Footer";
 import { Suspense } from "react";
 
 

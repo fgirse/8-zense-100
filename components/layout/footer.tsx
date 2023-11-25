@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Social from "@/components/Social";
+import Social from "Components/Social";
 import config from "../../config/config.json";
 import menu from "../../config/menu.json";
 import social from "../../config/social.json";

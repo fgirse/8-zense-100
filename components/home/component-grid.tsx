@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useDemoModal } from "@/components/home/demo-modal";
-import Popover from "@/components/shared/popover";
-import Tooltip from "@/components/shared/tooltip";
+import { useDemoModal } from "Components/home/demo-modal";
+import Popover from "Components/shared/popover";
+import Tooltip from "Components/shared/tooltip";
 import { ChevronDown } from "lucide-react";
 
 export default function ComponentGrid() {
