@@ -46,7 +46,7 @@ export default async function Home() {
       <h1 className="text-2xl text-slate-200"></h1>
     </div>
     <div className="bg-[url('/images/sideboardobg.png')] bg-contain
-     bg-no-repeat w-full h-36 col-start-0 row-span-2 col-span-7 row-start-4"></div>
+    14 bg-no-repeat w-full h-36 col-start-0 row-span-2 col-span-7 row-start-4"></div>
     <div className="col-span-3 row-span-3 row-start-6">4</div>
     <div className="col-span-3 row-span-3 col-start-10 row-start-6">9</div>
     <div className="col-span-3 row-span-3 col-start-1 row-start-9">10</div>
@@ -60,10 +60,9 @@ export default async function Home() {
           style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
         >
           <a
-            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
-            href={DEPLOY_URL}
+            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"   href={DEPLOY_URL}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
             <svg
               className="h-4 w-4 group-hover:text-black"
@@ -94,7 +93,7 @@ export default async function Home() {
             </p>
           </a>
         </div>
-      
+   
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
