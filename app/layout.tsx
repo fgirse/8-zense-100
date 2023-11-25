@@ -1,4 +1,4 @@
-¨ovier from "../Components/AuthProvider"
+import AuthProvider from "../Components/AuthProvider"
 import "./globals.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -6,7 +6,7 @@ import cx from "classnames";
 import { sfPro, inter } from "./fonts"
 import Footer from "Components/layout/Footer";
 import { Suspense } from "react";
-
+import Nav from "@/components/Nav"
 
 export const metadata = {
   title: "8-zense.com",
@@ -22,6 +22,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
+      <AuthProvider>
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-slate-900 to--900" />
         <Suspense fallback="...">
@@ -33,6 +34,7 @@ export default async function RootLayout({
            <Footer />
         <Analytics />
       </body>
+      </AuthProvider>
     </html>
   );
 }
