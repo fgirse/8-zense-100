@@ -3,6 +3,6 @@ import { getServerSession } from "next-auth/next";
 
 
 export default async function Nav() {
-  const session = await getServerSession(Options);
-  return <Navbar session={session} />;
+  const session = await getServerSession(Option);
+  return <Navbar session={session} />
 }
