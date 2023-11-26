@@ -1,5 +1,5 @@
 "@/helpers/ImageFallback";
-import { getListPage } from "@/lib/contentParser";
+"@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/Call
 
