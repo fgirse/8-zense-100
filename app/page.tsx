@@ -1,14 +1,10 @@
-import Card from "Components/home/card";
+import Card from "@/components/home/card";
 import { DEPLOY_URL } from "@/lib/constants";
-import { Github, Twitter } from "Components/shared/icons";
-import WebVitals from "Components/home/web-vitals";
-import ComponentGrid from "Components/home/component-grid";
+import { Github, Twitter } from "@/components/shared/icons";
+import WebVitals from "@/components/home/web-vitals";
+import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
-import Gallery from"../Components/home/Gallery"
-
-
-
 
 export default async function Home() {
   const { stargazers_count: stars } = await fetch(
@@ -25,44 +21,64 @@ export default async function Home() {
     },
   )
     .then((res) => res.json())
-    .catch((e) => console.log(e));58
+    .catch((e) => console.log(e));
 
   return (
     <>
-      
-    
+<div className="w-[95vw] grid grid-cols-12 grid-rows-7 gap-1">
+    <div className="col-span-6 row-span-4">
 
-<div className="w-[90vw] bg-white grid grid-cols-12 grid-rows-11 gap-2">
-    <div className="bg-amber-500 col-span-7 row-span-3">
     <h1
-
-       className="animate-fade-up text-left font-black uppercase bg-gradient-to-br from-yellow-600 to-stone-500 bg-clip-text font-display text-4xl tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
+          className="animate-fade-up uppercase text-left font-black bg-gradient-to-br from-amber-500 to-stone-100 bg-clip-text font-display text-[2.33rem] tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-         Timeless Design
+          Timeless Design
         </h1>
     </div>
-    <div className="bg-amber-600 col-span-5 row-span-5 col-start-8">
-      <h1 className="text-2xl text-slate-200"></h1>
+    <div className="col-span-6 row-span-4 col-start-7">
+       <p className ="text-xs text-red-500">he beauty of a living thing is not the atoms that go into it -but the way those atoms are put together!</p>
     </div>
-    <div className="bg-[url('/images/sideboardobg.png')] bg-contain
-    14 bg-no-repeat w-full h-36 col-start-0 row-span-2 col-span-7 row-start-4"></div>
-    <div className="col-span-3 row-span-3 row-start-6">4</div>
-    <div className="col-span-3 row-span-3 col-start-10 row-start-6">9</div>
-    <div className="col-span-3 row-span-3 col-start-1 row-start-9">10</div>
-    <div className="col-span-3 row-span-3 col-start-10 row-start-9">11</div>
-    <div className="h-36 bg-[url('/images/LogoEZ.png')] bg-contain bg-no-repeat rounded-xl shadow-xl col-span-7 row-span-6 col-start-3 row-start-6">12</div>
+    <div className="col-span-6 row-span-3 row-start-5">t
+    <Image src="/images/sideboardobg.png" width="500" height="300" alt="sideboard"/>
+
+    </div>
+    <div className="col-span-6 row-span-3 col-start-7 row-start-5">4</div>
 </div>
-    <Gallery/>
-    
-         <div
+
+<div className="flex flex-col items-center justify-center   mb-20 rounded-xl  shadow-2xl">               
+<Image src="/images/LogoEZ.png" width="250"   height="250"    alt="LogoEZ.png"  />
+
+</div>
+
+      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+        <a
+          href="https://twitter.com/steventey/status/1613928948915920896"
+          target="_blank"
+          rel="noreferrer"
+          className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
+        >
+          <Twitter className="h-5 w-5 text-[#1d9bf0]" />
+          <p className="text-sm font-semibold text-[#1d9bf0]">
+            Introducing Precedent
+          </p>
+        </a>
+        
+        <p
+          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
+          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+        >
+          An opinionated collection of components, hooks, and utilities for your
+          Next.js project.
+        </p>
+        <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
         >
           <a
-            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"   href={DEPLOY_URL}
+            className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-black bg-black px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-black"
+            href={DEPLOY_URL}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <svg
               className="h-4 w-4 group-hover:text-black"
@@ -93,7 +109,7 @@ export default async function Home() {
             </p>
           </a>
         </div>
-   
+      </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card

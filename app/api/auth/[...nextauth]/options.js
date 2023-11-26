@@ -35,8 +35,8 @@ export const options = {
           role: userRole,
         };
       },
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_Secret,
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
     CredentialsProvider({
       name: "Credentials",

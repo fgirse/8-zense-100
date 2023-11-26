@@ -6,7 +6,7 @@ import cx from "classnames";
 import { sfPro, inter } from "./fonts"
 import Footer from "Components/layout/Footer";
 import { Suspense } from "react";
-import Nav from "@/components/Nav"
+import  Navbar from "@/components/layout/navbar";
 
 export const metadata = {
   title: "8-zense.com",
@@ -26,7 +26,7 @@ export default async function RootLayout({
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-slate-900 to--900" />
         <Suspense fallback="...">
-          <Nav />
+          <Navbar session={null} />
         </Suspense>
         <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
           {children}
