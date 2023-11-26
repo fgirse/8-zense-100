@@ -1,12 +1,12 @@
-import AuthProvider from "@/components/AuthProvider"
+import AuthProvider from "../Components/AuthProvider"
 import "./globals.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts"
-import Footer from "@/components/layout/Footer";
+import Footer from "../Components/layout//Footer";
 import { Suspense } from "react";
-import  Navbar from "@/components/layout/navbar";
+import  Navbar from "../Components/layout//navbar";
 
 export const metadata = {
   title: "8-zense.com",
