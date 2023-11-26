@@ -1,13 +1,11 @@
-import ImageFallback from "@/helpers/ImageFallback";
+"@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction";
-import SeoMeta from "@/partials/SeoMeta";
-import Testimonials from "@/partials/Testimonials";
-import { Button, Feature } from "@/types";
+import CallToAction from "@/partials/Call
+
 import { FaCheck } from "react-icons/fa/index.js";
 import Image from 'next/image';
-import Gallery from"../app/components//Gallery"
+import Gallery from"@/components/home/Gallery"
 import Pattern from '../../public/images/Pattern02.svg'
 import Hero from "/images/sideboardobg.png"
 
