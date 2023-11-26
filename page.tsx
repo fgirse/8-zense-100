@@ -1,5 +1,4 @@
-"@/helpers/ImageFallback";
-"@/lib/contentParser";
+"@/helpers/ImageFallback";"@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/Call
 
